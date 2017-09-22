@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Weather Widget</title>
+
+  <!-- load c3.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css" />
+</head>
+
+<style>
+  *,
+  *:after,
+  *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .weather_widget {
+    width: 400px;
+    height: 400px;
+    background: grey;
+    padding: 15px;
+    margin-right: 0px;
+    box-shadow: 5px 5px 5px #666;
+    float: left;
+    border-radius: 5%;
+  }
+
+  .update {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  #chart-one{
+    float: left;
+    width: 600px;
+  }
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+</style>
+
+<body>
+
+  <h1> Your location :) </h1>
+
+  <div id="map"></div>
+
+  <h1>Weather Widget</h1>
+
+  <div class="weather_widget">
+    <div class="weather_widget_top"></div>
+    <img alt="weather icon" class="weather_image">
+    <span class="weather_string">{ Weather Text }</span>
+    <p class="temp"> <span class="temp_c">##</span>&#176;C</p>
+    <p class="city_name">{ City Name }</p>
+    <p class="date_time">{ Date and Time }</p>
+    <p class="latitude">{ Latitude }</p>
+    <p class="longitude">{ Longitude }</p>
+  </div>
+
+
+  <button class="update">Update</button>
+
+  <h1> Weather Chart </h1>
+  <div id="chart-one"></div>
+
+  <!-- load d3.js and c3.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGcj5aiX4UZjNdw-ane2U6hhle1hV0vCw&callback=initMap" async
+    defer></script>
+  <script src="Api-Project-3.js"></script>
+</body>
+
+</html>
