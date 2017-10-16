@@ -13,7 +13,6 @@ var cityPromise = $.get("http://ipinfo.io", function(response) {
 }, "jsonp");
 
 $.when(cityPromise).done(function () {
-  console.log("hi");
   var key = "http://api.wunderground.com/api/61f0a55cb00602dc/conditions/q/Ontario/" + city + ".json";
 
   var weatherWidget = {
@@ -99,23 +98,23 @@ $.when(cityPromise).done(function () {
   //   $(".longitude").text(weatherWidget.weatherData.longitude);
   // },
   
-  charts: charts = c3.generate({
-	bindto: "#chart-one",
-	data: {
-		columns: [
-			['Degress C', 30, 40, 25, 15, 37, 10, 1],
-			],
-	type: "bar", //pie, bar, donut, scatter, etc
-	},
-	axis: {
-		x: {
-			type: "category",
-			categories: [
-				"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
-			],
-		},
-	},
-}),
+//   charts: charts = c3.generate({
+// 	bindto: "#chart-one",
+// 	data: {
+// 		columns: [
+// 			['Degress C', 30, 40, 25, 15, 37, 10, 1],
+// 			],
+// 	type: "bar", //pie, bar, donut, scatter, etc
+// 	},
+// 	axis: {
+// 		x: {
+// 			type: "category",
+// 			categories: [
+// 				"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
+// 			],
+// 		},
+// 	},
+// }),
 }
 });
 
@@ -152,13 +151,13 @@ function initMap() {
 
 
 
-$(".update").on("click", function () {
-  if (1===1){
-    $(".weather_widget").hide();
-};
+// $(".update").on("click", function () {
+//   if (1===1){
+//     $(".weather_widget").hide();
+// };
 
 
-});
+// });
 
 
 
